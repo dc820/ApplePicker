@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.UI; // This line enables use of UGUI features
 
 public class Basket : MonoBehaviour
 {
+    public Text scoreGT;
 
     // Update is called once per frame
     void Update()
@@ -25,7 +26,12 @@ public class Basket : MonoBehaviour
 
     void Start()
     {
-
+        // Find a refernece to the ScoreCounter GameObject
+        GameObject scoreGO = GameObject.Find("ScoreCounter");
+        //Get the Text Component of that GameObject
+        scoreGT = scoreGO.GetComponent<Text>();
+        // Set the starting number of points to 0
+        scoreGT.text = "0";
     }
 
     void OnCollisionEnter(Collision coll)
@@ -36,5 +42,11 @@ public class Basket : MonoBehaviour
         {
             Destroy(collidedWith);
         }
+
+        // Parse the text of the scoreGT into an int
+        int score = int.Parse(scoreGT.text);
+        // Add points for catching the apple
+        score += 100;
+        scoreGT.text = score.ToString();
     }
 }
