@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class ApplePicker : MonoBehaviour
 {
@@ -39,5 +40,11 @@ public class ApplePicker : MonoBehaviour
         // Remove the Basket from the List and destory the GameObject
         basketList.RemoveAt(basketIndex);
         Destroy(tBasketGO);
+
+        // Restart the game, which doesn't affect HighScore.Score
+        if(basketList.Count == 0)
+        {
+            SceneManager.LoadScene("_Scene_0");
+        }
     }
 }
