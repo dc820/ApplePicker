@@ -187,6 +187,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012056337162, guid: b1dc0c8eba52b1a41ad9a58c287abc12,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b1dc0c8eba52b1a41ad9a58c287abc12, type: 2}
   m_IsPrefabParent: 0
@@ -293,7 +298,6 @@ MonoBehaviour:
   numBaskets: 3
   basketBottomY: -14
   basketSpacingY: 2
-  basketList: []
 --- !u!1 &1037987681
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,6 +460,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 447856, guid: d7f01940a165244a1b0ed8ac30262aad, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013961427310, guid: d7f01940a165244a1b0ed8ac30262aad,
+        type: 2}
+      propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
