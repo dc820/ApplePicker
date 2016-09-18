@@ -12,7 +12,7 @@ GameObject:
   - 65: {fileID: 6592158}
   - 23: {fileID: 2392158}
   - 114: {fileID: 114000012209498710}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Basket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
